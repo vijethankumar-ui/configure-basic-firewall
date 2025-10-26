@@ -1,0 +1,25 @@
+# Windows Firewall GUI Steps
+
+## 1. Open Firewall
+
+## 2. List Current Rules
+- Click **Inbound Rules** → Scroll through rules
+
+## 3. Block Port 23 (Telnet)
+- Click **New Rule…** 
+- Port → TCP → 23 → Block → Apply to all profiles 
+- Name: Blocking example → Finish
+
+## 4. Test Port 23
+- Open PowerShell 
+- `Test-NetConnection -ComputerName localhost -Port 23`
+
+## 5. Allow Port 22 (SSH)
+- New Rule → Port → TCP → 22 → Allow → Apply → Name: Allow SSH → Finish
+
+## 6. Remove Test Rules
+- In **Inbound Rules**, right-click `Blocking example` / `Allow SSH` → Delete
+
+## 7. Summary
+- Firewall filters traffic based on rules (port, protocol, IP, application)
+- Blocked packets are dropped; allowed packets pass
