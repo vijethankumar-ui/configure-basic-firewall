@@ -3,7 +3,7 @@
 This repository demonstrates basic firewall operations on Windows using PowerShell and GUI:
 
 - Listing inbound rules
-- Blocking a specific port (Telnet, port 23)
+- Blocking a specific port (port 23)
 - Allowing SSH (port 22)
 - Testing rules
 - Cleaning up rules
